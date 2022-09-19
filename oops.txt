@@ -1,0 +1,107 @@
+class Employee:
+    company = 'SAP LABS'
+    boss = 'Benjim'
+    def __init__(obj, d, eid, s, a, t):
+        obj.department = d
+        obj.employeeid = eid
+        obj.salary = s 
+        obj.address = a
+        obj.transportation = t
+e1 = Employee('R&D', 1, 50000, 'adarsh vihar', 'bus')
+print(e1.__dict__)
+
+e2 = Employee('Engineering',2,60000,'Vijayanagara','cab')
+e3 = Employee('ERP',2,80000,'Vijayanagara','cab')
+e4 = Employee('cloud',2,70000,'Vijayanagara','cab')
+e5 = Employee('AI/ML',2,80000,'Vijayanagara 1 stage ','cab')
+e6 = Employee('Space',2,90000,'Vijayanagara 2nd stage','cab')
+
+
+
+
+
+class laptop:
+    company_name = 'Sap labs'
+    tollfree_num = 777666
+    founded = 1970
+    def __init__(self, m, o, p):
+        self.model_num = m
+        self.operating_system = o
+        self.processor = p
+        
+l1 = laptop(2012, 'windows', 'i7')
+print(l1.model_num)
+print(l1.operating_system)
+print(l1.processor)
+print(laptop.company_name)
+        
+
+
+
+
+
+
+class Employee:
+    company = 'SAP LABS'
+    boss = 'Benjim'
+    def __init__(obj, d, eid, s, a, t):
+        obj.department = d
+        obj.employeeid = eid
+        obj.salary = s 
+        obj.address = a
+        obj.transportation = t
+    @classmethod #automatically considers the address of the current class
+    def modify(ob, newvalue): #accepts object address and the value
+        ob.college = newvalue
+        
+# person.college = 'Mysore'
+person.modify("Mysore")
+print(person.college)
+
+
+
+
+
+
+
+
+#Modifying values in object address
+class Employee:
+    company = 'SAP LABS'
+    boss = 'Benjim'
+    def __init__(obj, d, eid, s, a, t, e):
+        obj.department = d
+        obj.employeeid = eid
+        obj.salary = s 
+        obj.address = a
+        obj.transportation = t
+        obj.email = e
+    @classmethod #automatically considers the address of the current class
+    def modify(ob, newvalue): #accepts object address and the value
+        ob.college = newvalue
+        
+    def modifyemail(res,newvalue):
+        res.email = newvalue
+        
+    @classmethod
+    def add(cls, address):
+        print(cls.address)
+    
+    @classmethod
+    def read(cls):
+        print(cls.address) #only reading the address
+        
+    @classmethod
+    def delete(cls):
+        del cls
+    
+p1 = Employee('Engineering',2,60000,'Vijayanagara','cab','ngawangchoeying300@gmail.com')   
+# print(p1.email)
+# p1.email= "sitaraman@gmail.com"
+# print(p1.email)
+# Employee.modifyemail(p1,'sairaman@gmail.com') #
+# print(p1.email)
+
+p1.delete()
+
+
